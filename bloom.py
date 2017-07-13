@@ -13,6 +13,8 @@ des2 = soup.find('span',attrs={"id":"hidden"})
 edu1 = soup.find_next_sibling('h2',attrs={'class':'sectionTitle'})
 edu = soup.find('div',attrs={"itemprop":"alumniOf"})
 edu2 = soup.find('strong')
+
+
 l = []
 str = []
 str.append(des1.text)
@@ -32,11 +34,11 @@ l.append(",")
 
 
 
-print(name_box.text,title_box.text,company_box.text,age_box.text,age.text,des1.text,des2.text,edu.text)
+# print(name_box.text,title_box.text,company_box.text,age_box.text,age.text,des1.text,des2.text,edu.text)
 
-saveFile = open('file7.csv','w')
-csv_writer = csv.writer(saveFile)
-csv_writer.writerow(l)
+# saveFile = open('file7.csv','w')
+# csv_writer = csv.writer(saveFile)
+# csv_writer.writerow(l)
 
 
 
