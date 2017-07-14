@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+
+html, body {
+    border: none;
+    margin: 0;
+    padding: 0;     
+    font-family: Helvetica;
+    background: transparent;
+    font-size: 12px;
+}
+
+.zone {
+    position: relative;
+    width: 318px;
+    height: 452px;
+    overflow: hidden;
+    border: 1px solid #fff;
+    margin: 0;
+    background-color: #fdfdfd;
+    font-size: 12px;
+}
+
+.zone a {
+    text-decoration: none;
+}
+
+.zone ul {
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.zone ul li {
+    margin: 0;
+    padding: 5px 0 0;
+    overflow: hidden;
+    height: 75px;
+    border-top: 3px solid #ccc;
+}
+
+.zone ul li .ad .image img {
+    width: 54px;
+    height: 40px;
+}
+
+.zone ul li .ad .image, .zone ul li .ad .text {
+    padding: 0;
+    margin: 0;
+}
+
+.zone ul li .ad .text a, .zone ul li .ad .text span {
+    margin: 0;
+}
+
+.zone ul li .ad .text .title {
+    font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+    color: #333;
+    display: block;
+}
+
+.zone ul li .ad .text .description {
+    font: 11px Verdana, Arial, Helvetica, sans-serif;
+    color: #333;
+    display: block;
+}
+
+.zone ul li .ad .text .displayname {
+    font: 10px Verdana, Arial, Helvetica, sans-serif;
+    color: #999;
+    display: block;
+}
+
+.zone .advlabel a {
+    color: #333;
+    text-decoration: underline;
+}

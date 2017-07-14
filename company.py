@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import csv
-data = open('profiles\ihsmarkit.htm').read()
+data = open('profiles\baycapital.html').read()
 soup = BeautifulSoup(data,'html.parser')
 comp = soup.find('p',attrs={'id':'bDesc'})
 
@@ -19,9 +19,9 @@ l.append(",")
 l.append(str)
 l.append(",")
 
-# print(comp.text)
-# print(detail.text.strip())
-# print(s.text)
-saveFile = open('file2.csv','w')
-csv_writer = csv.writer(saveFile)
-csv_writer.writerow(l)
+print(comp.text)
+print detail.text.strip()
+print(s.text)
+# saveFile = open('file2.csv','w')
+# csv_writer = csv.writer(saveFile)
+# csv_writer.writerow(l)

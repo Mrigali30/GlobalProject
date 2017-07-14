@@ -1,0 +1,13 @@
+﻿*, a{color:#000!important}
+
+body { 
+	font-family: Georgia, "Times New Roman", Times, serif;  
+	font-size: 14px;  
+	color: #000000!important;  
+	background-color: #FFFFFF;  
+	} 
+	
+          
+#headerContainer,#footerContainer, img, .googleAdsModule, #columnRight, #newFooterContainer, #subColElement, #taboola-div{display:none;}
+
+#ssChart img, div.chartDisplay img, img.chartDisplay, #sectorChart img, #cht img{display:block;}
