@@ -39,27 +39,28 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">   
                 <li >
-                    <a  style="color: white; "> <b>Steve Smith</b> </a>
+                    <a  style="color: white; "> <b>{{ obj }}</b> </a>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                </li>      
+                    <a href={{url_for('root')}}><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                </li>
             </ul>
             <!-- Side bar -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <img class="circular" style="border-radius: 50%; padding-left: 8px" height="240" src="../static/img/1.jpg"/>
+                        <img class="circular" style="border-radius: 50%; padding-left: 30px;" height="160" src="../static/img/index.jpg"/>
+                    </li>
+
+                    <li>
+                        <label><h4 style="color: white; padding-left:30px;padding-top:15px"> Managing Director</h4></label>
                     </li>
                     <li>
-                        <label><h3 style="color: white; padding-left:15px"> Managing Director</h3></label>
+                        <a href="{{url_for('search2')}}"><i class="fa fa-fw fa-user"></i> People's Insight</a>
                     </li>
                     <li>
-                        <a href="search.html"><i class="fa fa-user"></i> People's Insight</a>
+                        <a href="{{url_for('recomm')}}"><i class="fa fa-fw fa-dashboard"></i> Recommends</a>
                     </li>
-                    <li>
-                        <a href="recommends.html"><i class="fa fa-fw fa-bar-chart-o"></i>Recommends</a>
-                    </li>   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -101,7 +102,7 @@
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left"><a href="profile.html">View Details</a></span>
+                                    <span class="pull-left"><a href="{{url_for('profile')}}">View Details</a></span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -124,7 +125,7 @@
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left"><a href="company.html">View Details</a></span>
+                                    <span class="pull-left"><a href="{{url_for('info')}}">View Details</a></span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
@@ -147,7 +148,7 @@
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left"></span><a href="recommends.html">View Details</a></span></span>
+                                    <span class="pull-left"></span><a href="{{url_for('recomm')}}">View Details</a></span></span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
