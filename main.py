@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+from bloom import parse
 app = Flask(__name__)
 
 name = " "
@@ -21,12 +21,14 @@ def search2():
 
 @app.route('/widegts')
 def wid():
+    global name2
     name2 = request.args.get('inputSuccess')
     return render_template('widegts.html', name=name2, obj=name)
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html', obj=name)
+    d = parse()
+    return render_template('profile.html', obj=name,data=d)
 
 @app.route('/article')
 def article():
@@ -48,6 +50,7 @@ def recomm2():
 @app.route('/recomm3')
 def recomm3():
     return render_template('recommends3.html', obj=name)
+
 
 
 if __name__ == '__main__':

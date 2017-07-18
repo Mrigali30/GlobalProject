@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
 
@@ -72,11 +72,16 @@
                         <h1 class="page-header">
                             Search Successful!
                         </h1>
+
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> 
+                                <i class="fa fa-dashboard"></i>
                             </li>
                             <h5> What do you want to know? </h5>
+                            <span><b>Name:  </b> {{data['Name']}}</span></br>
+                            <span><b>Designation:  </b>{{data['Job']}}</span></br>
+                            <span><b>Company:  </b>{{data['Company']}}</span></br>
+                            <span><b>Background:  </b>{{data['Background']}}</span></br>
                         </ol>
                     </div>
                 </div>
