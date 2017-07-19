@@ -97,9 +97,10 @@
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                 <span class="pull-left"><a href="{{url_for('profile')}}">View Details</a></span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
+
+
+                                    <div class="clearfix"></div><span class="pull-left">{{data['Overview']}}......</span> <a href="{{url_for('profile')}}">Read More</a>
+                                    <span class="pull-right"><a href="{{url_for('profile')}}"><i class="fa fa-arrow-circle-right"></i></a></span>
                                 </div>
                             </a>
                         </div>
@@ -119,9 +120,9 @@
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left"><a href="{{url_for('article')}}">View Details</a></span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
+
+                                    <div class="clearfix"></div><span class="pull-left">{{data2['Overview']}}......</span> <a href="{{url_for('article')}}">Read More</a>
+                                    <span class="pull-right"><a href="{{url_for('article')}}"><i class="fa fa-arrow-circle-right"></i></a></span>
                                 </div>
                             </a>
                         </div>
@@ -141,9 +142,10 @@
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                 <span class="pull-left"><a href="{{url_for('info')}}">View Details</a></span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
+
+                                    <div class="clearfix"></div><span class="pull-left">{{data1['Overview']}}......</span> <a href="{{url_for('info')}}">Read More</a>
+                                    <span class="pull-right"><a href="{{url_for('info')}}"><i class="fa fa-arrow-circle-right"></i></a></span>
+
                                 </div>
                             </a>
                         </div>
@@ -162,9 +164,9 @@
                                 </div>
                             </div>
                             <a href="#">
-                                <div class="panel-footer">
+                                <div class="panel-footer" style="height:120px">
                                  <span class="pull-left"><a href="{{url_for('recomm')}}">View Details</a></span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <span class="pull-right"><a href="{{url_for('recomm')}}"><i class="fa fa-arrow-circle-right"></i></a></span>
                                     <div class="clearfix"></div>
                                 </div>
                             </a>

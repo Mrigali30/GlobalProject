@@ -2,7 +2,9 @@ import csv
 from bs4 import BeautifulSoup
 def parse(name2):
     name = name2.lower()
-    data = open("profiles\\" + name + ".htm").read()
+    n1 = name.split(" ")
+    n2 = n1[0]
+    data = open("profiles\\" + n2 + ".htm").read()
     soup = BeautifulSoup(data,'html.parser')
 
     name_box = soup.find('h1',attrs={'itemprop':'name'})# Lance Uggla
@@ -23,6 +25,9 @@ def parse(name2):
     d['Age']=age.text
     d['Alumni Of']= edu.text
     d['Background'] = des1.text+des2.text
+    str = d['Background']
+    str1 = str[:300]
+    d['Overview'] = str1
 
     # saveFile = open('text.csv','w')
     # csv_writer = csv.writer(saveFile)

@@ -27,7 +27,10 @@ def wid():
     name2 = request.args.get('inputSuccess')
     global name3
     name3 = request.args.get('inputWarning')
-    return render_template('widegts.html', name=name2, obj=name)
+    d = parse(name2)
+    l = parse2(name3)
+    dic = parse3(name2)
+    return render_template('widegts.html', name=name2, obj=name,data=d,data1 = l,data2 = dic)
 
 @app.route('/profile')
 def profile():

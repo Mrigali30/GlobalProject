@@ -2,7 +2,9 @@ from bs4 import BeautifulSoup
 import csv
 def parse2(name3):
     name = name3.lower()
-    data = open("profiles\\" + name + ".htm").read()
+    n1 = name.split(" ")
+    n2 = n1[0]
+    data = open("profiles\\" + n2 + ".htm").read()
     # data = open('profiles\ihsmarkit.htm').read()
     soup = BeautifulSoup(data,'html.parser')
 
@@ -14,6 +16,9 @@ def parse2(name3):
     l['Company Info'] = comp.text
     # l['Detail'] = detail.text
     l['Sub'] = s.text
+    str = comp.text
+    str1 = str[:300]
+    l['Overview']=str1
     # print(comp.text)
     # print detail.text.strip()
     # print(s.text)

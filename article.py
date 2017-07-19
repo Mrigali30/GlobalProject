@@ -20,4 +20,8 @@ def parse3(name2):
     dic['Date'] = date.text
     dic['Des'] = des.text
 
+    str = title.text+des.text
+    str1 = str[:300]
+    dic['Overview'] = str1
+
     return dic
