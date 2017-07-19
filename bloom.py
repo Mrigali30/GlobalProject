@@ -1,7 +1,8 @@
 import csv
 from bs4 import BeautifulSoup
-def parse():
-    data = open('profiles\Cyrus.html').read()
+def parse(name2):
+    name = name2.lower()
+    data = open("profiles\\" + name + ".htm").read()
     soup = BeautifulSoup(data,'html.parser')
 
     name_box = soup.find('h1',attrs={'itemprop':'name'})# Lance Uggla
@@ -20,6 +21,7 @@ def parse():
     d['Job'] = title_box.text
     d['Company'] = company_box.text.strip()
     d['Age']=age.text
+    d['Alumni Of']= edu.text
     d['Background'] = des1.text+des2.text
 
     # saveFile = open('text.csv','w')
