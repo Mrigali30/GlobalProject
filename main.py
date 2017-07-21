@@ -70,7 +70,10 @@ def recomm2():
 
 @app.route('/recomm3')
 def recomm3():
-    return render_template('recommends3.html', obj=name)
+    labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
+    values = [10, 9, 8, 7, 6, 1, 7, 8]
+    return render_template('recommends3.html', obj=name, values=values, labels=labels)
+
 
 
 if __name__ == '__main__':
