@@ -174,8 +174,8 @@
                     <!--</div>-->
                 <!--</div>-->
 
-<!-- bar chart canvas element -->
-                <canvas id="recomm3" width="600" height="400"></canvas>
+
+                <canvas id="test" width="600" height="400"></canvas>
  <!-- bar chart canvas element -->
 
                     <script>
@@ -197,10 +197,10 @@
                         }
 
                         // get bar chart canvas
-                        var mychart = document.getElementById("recomm3").getContext("2d");
+                        var mychart = document.getElementById("test").getContext("2d");
 
                         steps = 10
-                        max = 20
+                        max = 100
                         // draw bar chart
                         new Chart(mychart).Bar(barData, {
                         scaleOverride: true,
@@ -213,6 +213,29 @@
                         scaleShowLabels: true
                         });
                     </script>
+                <!--<canvas id="test" width="600" height="400"></canvas>-->
+<!--<script>-->
+   <!--var pieData = [-->
+            <!--{% for item,label,colors in set %}-->
+                <!--{-->
+                    <!--value: {{item}},-->
+                    <!--label: "{{label}}",-->
+                    <!--color : "{{colors}}"-->
+                <!--},-->
+                <!--{% endfor %}-->
+
+
+         <!--];-->
+
+   <!--// get bar chart canvas-->
+   <!--var mychart = document.getElementById("test").getContext("2d");-->
+
+   <!--steps = 10-->
+   <!--max = 100-->
+   <!--// draw pie chart-->
+   <!--new Chart(document.getElementById("test").getContext("2d")).Pie(pieData);-->
+
+<!--</script>-->
 
 
 
