@@ -156,82 +156,28 @@
                         </div>
                     </div>
                 </div>
-                <div name="row">
-                    <div class="col-lg-12">
-                        <ul class="bargraph">
-                            <li class="reddeep">KY3P</li>
-                            <li class="redpink">CDS Liquidity</li>
-                            <li class="pink">Connex</li>
-                            <li class="orangered">EDM</li>
-                            <li class="orange">Counterparty Manager</li>
-                            <li class="yellow">ThinkFolio</li>
-                            <li class="green">iBoxx</li>
-                            <li class="greenbright">MarketWire</li>
-                            <li class="greenblue">CTI Consulting</li>
-                            <li class="blue">Loan Settlement</li>
-                            <li class="xaxis"></li>
-                        </ul>
-                    </div>
-                </div>
-                <h1>Flask Chart.js</h1>
+                <!--<div name="row">-->
+                    <!--<div class="col-lg-12">-->
+                        <!--<ul class="bargraph">-->
+                            <!--<li class="reddeep">KY3P</li>-->
+                            <!--<li class="redpink">CDS Liquidity</li>-->
+                            <!--<li class="pink">Connex</li>-->
+                            <!--<li class="orangered">EDM</li>-->
+                            <!--<li class="orange">Counterparty Manager</li>-->
+                            <!--<li class="yellow">ThinkFolio</li>-->
+                            <!--<li class="green">iBoxx</li>-->
+                            <!--<li class="greenbright">MarketWire</li>-->
+                            <!--<li class="greenblue">CTI Consulting</li>-->
+                            <!--<li class="blue">Loan Settlement</li>-->
+                            <!--<li class="xaxis"></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+
 <!-- bar chart canvas element -->
-<canvas id="chart" width="600" height="400"></canvas>
+                <canvas id="recomm3" width="600" height="400"></canvas>
+ <!-- bar chart canvas element -->
 
-<script>
-
-   // bar chart data
-   var barData = {
-   labels : [{% for item in labels %}
-                  "{{item}}",
-              {% endfor %}],
-   datasets : [
-      {
-            fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
-            bezierCurve : false,
-            data : [{% for item in values %}
-                      {{item}},
-                    {% endfor %}]
-      }]
-   }
-
-    Chart.defaults.global.animationSteps = 50;
-    Chart.defaults.global.tooltipYPadding = 16;
-    Chart.defaults.global.tooltipCornerRadius = 0;
-    Chart.defaults.global.tooltipTitleFontStyle = "normal";
-    Chart.defaults.global.tooltipFillColor = "rgba(0,0,0,0.8)";
-    Chart.defaults.global.animationEasing = "easeOutBounce";
-    Chart.defaults.global.responsive = false;
-    Chart.defaults.global.scaleLineColor = "black";
-    Chart.defaults.global.scaleFontSize = 16;
-
-   // get bar chart canvas
-   var mychart = document.getElementById("chart").getContext("2d");
-
-   steps = 10
-   max = 10
-   // draw bar chart
-   var LineChartDemo = new Chart(mychart).Line(barData, {
-        scaleOverride: true,
-        scaleSteps: steps,
-        scaleStepWidth: Math.ceil(max / steps),
-        scaleStartValue: 0,
-        scaleShowVerticalLines: true,
-        scaleShowGridLines : true,
-        barShowStroke : true,
-        scaleShowLabels: true,
-        bezierCurve: false,
-
-   });
-
-
-</script>
-                    <h1>Flask Chart.js</h1><!-- bar chart canvas element -->
-                    <canvas id="recomm3" width="600" height="400"></canvas>
                     <script>
                         // bar chart data
                         var barData = {
@@ -251,10 +197,10 @@
                         }
 
                         // get bar chart canvas
-                        var mychart = document.getElementById("chart").getContext("2d");
+                        var mychart = document.getElementById("recomm3").getContext("2d");
 
                         steps = 10
-                        max = 10
+                        max = 20
                         // draw bar chart
                         new Chart(mychart).Bar(barData, {
                         scaleOverride: true,
@@ -267,6 +213,8 @@
                         scaleShowLabels: true
                         });
                     </script>
+
+
 
 
             </div>

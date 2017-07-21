@@ -71,7 +71,8 @@ def recomm2():
 @app.route('/recomm3')
 def recomm3():
     labels = ["January", "February", "March", "April", "May", "June", "July", "August"]
-    values = [10, 9, 8, 7, 6, 1, 7, 8]
+    values = [10, 2, 8, 7, 6, 1, 17, 4]
+    colors = ["#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA", "#ABCDEF", "#DDDDDD", "#ABCABC"]
     return render_template('recommends3.html', obj=name, values=values, labels=labels)
 
 
